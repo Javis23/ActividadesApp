@@ -10,13 +10,16 @@
                 <!--<p>Duracion: {{time}}</p> -->
                 <p>Fecha inicio: {{calendar_start}}</p>
                 <p>Fecha finish: {{calendar_finish}}</p>
-                <p>Falta </p>
-                <form action="/activities/delete/{{_id}}?_method=DELETE" method="POST">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button class="btn btn-danger w-100 btn-sm" type="submit">
-                        Borrar
-                    </button>
-                </form>
+                <p>Tiempo: {{time}} dias</p>
+                <div class="d-flex justify-content-between">
+                    <a href="/activity/{{url}}" class="btn btn-success btn-sm">Ver Proyecto</i></a>
+                    <form action="/activities/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger btn-sm" type="submit">
+                            Borrar
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -25,7 +28,7 @@
         <div class="card-body">
             <h1>Hola {{user.name}}</h1>
             <p class="lead">No hay pendientes aun</p>
-            <a href="/activities/add" class="btn btn-success w-100">Crea una tarea</a>
+            <a href="/activities/add" class="btn btn-success w-100">Crea un proyecto</a>
         </div>
     </div>
     {{/each}}
